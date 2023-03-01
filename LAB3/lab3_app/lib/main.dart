@@ -40,6 +40,11 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter--;
     });
   }
+    void _dropCounter() {
+    setState(() {
+      _counter=0;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -79,7 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
             ElevatedButton(
-              onPressed: _incrementCounter,
+              onPressed: _dropCounter,
               child: Text(
                 "Сбросить",
                 style: TextStyle(fontSize: 14, color: Colors.grey),
