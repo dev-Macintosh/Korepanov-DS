@@ -34,7 +34,8 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter++;
     });
   }
-    void _dincrementCounter() {
+
+  void _dincrementCounter() {
     setState(() {
       _counter--;
     });
@@ -76,6 +77,17 @@ class _MyHomePageState extends State<MyHomePage> {
                       backgroundColor: MaterialStatePropertyAll(Colors.red)),
                 ),
               ],
+            ),
+            ElevatedButton(
+              onPressed: _incrementCounter,
+              child: Text(
+                "Сбросить",
+                style: TextStyle(fontSize: 14, color: Colors.grey),
+              ),
+              style: ButtonStyle(
+                  backgroundColor: MaterialStatePropertyAll(Colors.transparent),
+                  shadowColor: MaterialStatePropertyAll(Colors.transparent),
+                  padding: MaterialStatePropertyAll(EdgeInsets.all(20))),
             ),
           ],
         ),
