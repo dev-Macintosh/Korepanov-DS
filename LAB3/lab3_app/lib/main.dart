@@ -34,6 +34,11 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter++;
     });
   }
+    void _dincrementCounter() {
+    setState(() {
+      _counter--;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
-                    onPressed: _incrementCounter,
+                    onPressed: _dincrementCounter,
                     child: Text(
                       "-",
                       style: TextStyle(fontSize: 22),
