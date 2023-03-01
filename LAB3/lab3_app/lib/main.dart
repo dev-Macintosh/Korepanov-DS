@@ -52,6 +52,26 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                    onPressed: _incrementCounter,
+                    child: Text(
+                      "-",
+                      style: TextStyle(fontSize: 22),
+                    )),
+                ElevatedButton(
+                  onPressed: _incrementCounter,
+                  child: Text(
+                    "+",
+                    style: TextStyle(fontSize: 22),
+                  ),
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStatePropertyAll(Colors.red)),
+                ),
+              ],
+            ),
           ],
         ),
       ),
